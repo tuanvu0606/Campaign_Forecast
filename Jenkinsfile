@@ -4,7 +4,7 @@ pipeline {
     {
         stage('Install dependencies') {
             steps {
-                sh "pip install countryinfo"
+                //sh "pip install countryinfo"
                 sh 'ls'
             }
         }
