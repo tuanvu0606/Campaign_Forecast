@@ -4,14 +4,15 @@ pipeline {
     {
         stage('Install dependencies') {
             steps {
-                pip install countryinfo
+                sh "pip install countryinfo"
                 sh 'ls'
             }
         }
 
         stage ('AWS_flashing_creatives_pipeline') {
             steps {
-                build job: 'AWS_flashing_creatives_pipeline'
+                //build job: 'AWS_flashing_creatives_pipeline'
+                echo "haha"
             }
         }
 
