@@ -12,7 +12,7 @@ pipeline {
         stage ('Query_country_population') {
             steps {
                 //build job: 'AWS_flashing_creatives_pipeline'
-                sh "python ${workspace}/get_country_information.py"
+                sh "python3 ${workspace}/get_country_information.py"
                 echo "haha"
             }
         }
