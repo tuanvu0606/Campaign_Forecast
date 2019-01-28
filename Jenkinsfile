@@ -2,8 +2,9 @@ pipeline {
     agent any
     stages 
     {
-        stage('Start') {
+        stage('Install dependencies') {
             steps {
+                pip install countryinfo
                 sh 'ls'
             }
         }
