@@ -9,6 +9,20 @@ pipeline {
             }
         }
 
+        /* .. snip .. */
+        stage('run-parallel-Jobs') {
+          steps {
+            parallel(
+              a: {
+                build job: 'Parallel_Job_1'
+              },
+              b: {
+                build job: 'Parallel_Job_2'
+              }
+            )
+          }
+        }
+
         stage ('AWS_flashing_creatives_pipeline') {
             steps {
                 build job: 'AWS_flashing_creatives_pipeline'                
