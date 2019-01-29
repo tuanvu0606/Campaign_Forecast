@@ -1,5 +1,7 @@
 # coding=utf-8
 from countryinfo import CountryInfo
 
-country = CountryInfo('Singapore')
-print (country.info())
+country = CountryInfo('Austria')
+print (country.population())
+
+print (country.area())

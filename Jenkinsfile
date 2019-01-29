@@ -9,9 +9,14 @@ pipeline {
             }
         }
 
-        stage ('Query_country_population') {
+        stage ('AWS_flashing_creatives_pipeline') {
             steps {
-                //build job: 'AWS_flashing_creatives_pipeline'
+                build job: 'AWS_flashing_creatives_pipeline'                
+            }
+        }
+
+        stage ('Query_country_population') {
+            steps {                
                 sh "python3 ${workspace}/get_country_information.py"
                 echo "haha"
             }
